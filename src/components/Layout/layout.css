@@ -1,0 +1,22 @@
+.headerBackground {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../images/banner-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.teste {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 767px) {
+    .headerBackground {
+        background-size: 150% 120%;
+    }
+}
