@@ -6,7 +6,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -32,13 +31,10 @@ const Header = ({ siteTitle }) => {
   return (
     <Box style={{ position: 'relative', zIndex: 2 }}>
       <Flex
-        bg={useColorModeValue('#5C2CC5', 'gray.800')}
+        bg="transparent"
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}>
         <Flex flex={{ base: 1 }} justify={{ sm: 'left', md: 'center' }}>
           <Text
@@ -92,7 +88,7 @@ const DesktopNav = () => {
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
-                  backgroundImage: 'linear-gradient(40deg, rgb(184,93,255) 0%, rgb(255,69,69) 100%);',
+                  backgroundImage: 'linear-gradient(40deg, #FF2768 0%, #DC143C 100%);',
                   borderRadius: '0 0 10px 10px'
                 }}>
                 {navItem.label}
@@ -128,13 +124,11 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       role={'group'}
       display={'block'}
       p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      rounded={'md'}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -227,41 +221,17 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'Sobre',
   },
   {
-    label: 'Find Work',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'Portfolio',
   },
   {
-    label: 'Learn Design',
+    label: 'Avaliações',
     href: '#',
   },
   {
-    label: 'Hire Designers',
+    label: 'Contato',
     href: '#',
   },
 ];

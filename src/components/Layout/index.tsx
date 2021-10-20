@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../Header"
 import "./layout.css"
+import { Box } from "@chakra-ui/layout"
+import Footer from "../Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,19 +27,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <div className="headerBackground" />
+      <Box width={{ base: "100%", sm: "0%", md: "25%" }}>
+        <div className="header-background" />
+      </Box>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="teste">
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+      <div className="header-content">
+        <Box pb="50">
+          <main>{children}</main>
+        </Box>
+        <Footer />
       </div>
     </>
   )

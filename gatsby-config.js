@@ -28,6 +28,12 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png`,
             },
         },
-        "@chakra-ui/gatsby-plugin"
+        "@chakra-ui/gatsby-plugin",
+        {
+            resolve: `gatsby-plugin-s3`,
+            options: {
+                bucketName: "thiscosta",
+            },
+        },
     ],
 }
