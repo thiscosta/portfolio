@@ -27,15 +27,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Box width={{ base: "100%", sm: "0%", md: "25%" }}>
-        <div className="header-background" />
-      </Box>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      {/* <Header sriteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <div className="header-content">
         <Box pb="50">
           <main>{children}</main>
         </Box>
-        <Footer />
       </div>
     </>
   )

@@ -6,15 +6,17 @@ import Specialities from "../components/Specialities"
 import Portfolio from "../components/Portfolio"
 import WorkWithMe from "../components/WorkWithMe"
 import Testimonials from "../components/Testimonials"
+import Home from "../components/Home"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <HeaderContent />
+    <Home />
+    {/* <HeaderContent />
     <Specialities />
     <Portfolio />
     <WorkWithMe />
-    <Testimonials />
+    <Testimonials /> */}
   </Layout>
 )
 

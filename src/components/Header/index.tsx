@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
   return (
     <Box style={{ position: 'relative', zIndex: 2 }}>
       <Flex
-        bg="transparent"
+        bg="blue"
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
