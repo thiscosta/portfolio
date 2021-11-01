@@ -22,7 +22,7 @@ const Title: React.FC = () => {
             justifyContent="center"
         >
             <StaticImage
-                src="../../images/avatar/avatar.png"
+                src="../../../images/avatar/avatar.png"
                 width={300}
                 height={300}
                 quality={95}
