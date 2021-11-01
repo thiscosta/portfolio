@@ -9,7 +9,7 @@ const Experience: React.FC = () => {
         {
           title: "Desenvolvedor Full Stack",
           content:
-            "Bacharelado em sistemas de informação com duração de 4 anos",
+            "Desenvolvimento full stack, design e arquitetura de soluções em ambiente cloud, gerenciamento de cluster kubernetes, monitoramento de aplicações em ambiente produtivo utilizando ELK, Grafana e Webhooks, criação de pipelines de CI/CD e ingestões de dados para o BigQuery (GCP) para o sistema de logística do Magazine Luiza",
           date: "19/10/2020 - Atual",
           description: "Luizalabs",
           tags: [
@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
         },
         {
           title: "Engenheiro de dados",
-          content: "Curso técnico em informática com ênfase em programação",
+          content: "Design, arquitetura e desenvolvimento de aplicações em ambiente de BigData para o cálculo de score do Serasa, criação de pipelines de CI/CD, gerenciamento do controle de execução de jobs em ambiente Hadoop",
           date: "02/12/2019 - 16/10/2020",
           description: "Dextra",
           tags: [
