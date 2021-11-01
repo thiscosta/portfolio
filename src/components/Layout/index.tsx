@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import Header from "../Header"
 import "./layout.css"
 import { Box } from "@chakra-ui/layout"
+import Footer from "../Footer"
 
 export interface LayoutParams {
-  onScreenChange: (nextScreen: number) => void;
-  children: React.ReactNode;
+  onScreenChange: (nextScreen: number) => void
+  children: React.ReactNode
 }
 
 const Layout: React.FC<LayoutParams> = ({ children, onScreenChange }) => {
-
   return (
     <>
       <Header onScreenChange={onScreenChange} siteTitle={`Thiago Costa`} />
@@ -19,6 +19,7 @@ const Layout: React.FC<LayoutParams> = ({ children, onScreenChange }) => {
           <main>{children}</main>
         </Box>
       </div>
+      <Footer />
     </>
   )
 }

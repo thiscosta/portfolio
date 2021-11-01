@@ -2,7 +2,7 @@ import { Box, GridItem, Text } from "@chakra-ui/layout"
 import React from "react"
 import Skill from "./components/Skill"
 
-// import { Container } from './styles';
+
 
 const CodingSkills: React.FC = () => {
   return (

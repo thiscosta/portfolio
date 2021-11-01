@@ -26,7 +26,7 @@ const Logo = () => {
                     y="18.5"
                     strokeWidth={0}
                     stroke="#000"
-                    fill="#ffffff"
+                    fill="gray"
                 >
                     © 2021 thiscosta
                 </text>
@@ -70,8 +70,11 @@ const SocialButton = ({
 export default function Footer() {
     return (
         <Box
-            bgGradient="linear(to-l, #43B0F1, #057DCD)"
-            color="white">
+            position="static"
+            bottom="0"
+            w="full"
+            left="0"
+            color="grey">
             <Container
                 as={Stack}
                 maxW={'6xl'}

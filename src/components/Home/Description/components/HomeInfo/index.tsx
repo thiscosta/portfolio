@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import React from 'react';
 
-// import { Container } from './styles';
+
 
 export interface HomeInfoProps {
     title: string;
@@ -16,7 +16,7 @@ const HomeInfo: React.FC<HomeInfoProps> = ({
 }) => {
     return (
         <Flex
-            ml={{ sm: '0px', lg: '30px' }}
+            mx={{ sm: '10%', lg: '10%' }}
             alignItems="center"
             justifyContent="flex-start"
         >

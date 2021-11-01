@@ -1,75 +1,76 @@
-import React from 'react';
-import { Box, Flex, Grid, SimpleGrid, Text } from '@chakra-ui/layout';
-import Project from './Project';
+import React from "react"
+import { Box, Text, VStack } from "@chakra-ui/layout"
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs"
+import Sites from "./Sites"
+import Apps from "./Apps"
+import Systems from "./Systems"
+import Customs from "./Customs"
 
 const Portfolio: React.FC = () => {
-    return (
-        <Flex py="20" bgColor="#F7F4FD" direction="column">
-            <Box>
-                <Text
-                    bgColor="#1E3D58"
-                    bgClip="text"
-                    fontSize="3xl"
-                    fontWeight="medium"
-                    align="center"
-                >
-                    Portfolio
-                </Text>
-            </Box>
-            <Box mt="5" w="70%" alignSelf="center">
-                <Text
-                    noOfLines={4}
-                    bgColor="#1E3D58"
-                    bgClip="text"
-                    fontSize="lg"
-                    fontWeight="medium"
-                    align="center"
-                >
-                    Entregar produtos de qualidade é o que faço de melhor, buscando sempre a melhor solução para os meus clientes.
-                </Text>
-            </Box>
-            <Box mt="20">
-                <Text
-                    bgGradient="linear(to-l, #43B0F1, #057DCD)"
-                    bgClip="text"
-                    fontSize="4xl"
-                    fontWeight="extrabold"
-                    align="center"
-                >
-                    Últimos projetos
-                </Text>
-            </Box>
-            <SimpleGrid mt="20"
-                spacing="24px"
-                px={{ base: "10", md: "20", lg: "40" }}
-                columns={{ sm: 1, xl: 2 }}
-                alignItems="center"
-                justifyContent="center">
-                <Project
-                    tags={['Web', 'Customizado']}
-                    title="Nome do produto"
-                    description="Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book."
-                />
-                <Project
-                    tags={['Web', 'Customizado']}
-                    title="Nome do produto"
-                    description="Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book."   />
-                <Project
-                    tags={['Web', 'Customizado']}
-                    title="Nome do produto"
-                    description="Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book."   />
-            </SimpleGrid>
-        </Flex >
-    );
+  return (
+    <VStack
+      spacing={0}
+      align="stretch"
+      w={{ sm: "94%", md: "85%", xl: "70%" }}
+      ml={{ sm: "3%", md: "7.5%", xl: "15%" }}
+    >
+      <Box
+        roundedTop="lg"
+        bgColor="#2eca7f"
+        bgImage="url('images/banner-bg.png')"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        px="5%"
+        py="3%"
+      >
+        <Text
+          bgColor="white"
+          bgClip="text"
+          fontSize="5xl"
+          fontWeight="bold"
+          align="center"
+        >
+          Portfólio
+        </Text>
+      </Box>
+      <Box
+        boxShadow="xl"
+        roundedBottom="lg"
+        bgImage="url('images/banner-bg.png')"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        px="5%"
+        py="3%"
+      >
+        <Tabs isFitted variant="enclosed">
+          <TabList>
+            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>Sites</Tab>
+            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>Aplicativos</Tab>
+            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>
+              Sistemas web
+            </Tab>
+            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>
+              Soluções customizadas
+            </Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <Sites />
+            </TabPanel>
+            <TabPanel>
+              <Apps />
+            </TabPanel>
+            <TabPanel>
+              <Systems />
+            </TabPanel>
+            <TabPanel>
+              <Customs />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Box>
+    </VStack>
+  )
 }
 
-export default Portfolio;
+export default Portfolio

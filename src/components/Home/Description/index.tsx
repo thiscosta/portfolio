@@ -3,8 +3,6 @@ import { Box, Grid, GridItem, Text } from "@chakra-ui/layout"
 import React from "react"
 import HomeInfo from "./components/HomeInfo"
 
-// import { Container } from './styles';
-
 const Description: React.FC = () => {
   return (
     <Box borderBottomRadius="xl" bgColor="white" p="10%">
@@ -25,9 +23,7 @@ const Description: React.FC = () => {
             Sobre mim
           </Text>
           <Text mt="13px" fontSize="small" fontWeight="normal">
-            Hello! I’m Alex Smith. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor
-            volutpat ac. Duis nulla enim, condimentum nec ultricies.
+            Meu nome é Thiago Costa, sou desenvolvedor de software desde 2018 e tenho experiência com diversas tecnologias. Atualmente trabalhando no Luizalabs como desenvolvedor Fullstack
           </Text>
           <Button
             color="white"
