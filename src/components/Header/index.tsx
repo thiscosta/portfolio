@@ -23,13 +23,13 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons"
+import { NavigationContext } from "../../contexts/NavigationContexts"
 
 export interface HeaderParams {
   siteTitle: string
-  onScreenChange: (nextScreen: number) => void
 }
 
-const Header: React.FC<HeaderParams> = ({ siteTitle, onScreenChange }) => {
+const Header: React.FC<HeaderParams> = ({ siteTitle }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
@@ -42,16 +42,12 @@ const Header: React.FC<HeaderParams> = ({ siteTitle, onScreenChange }) => {
         align={"center"}
       >
         <Flex flex={{ base: 1 }} justify={{ sm: "left", md: "space-between" }}>
-          <Text
-            textAlign="left"
-            fontWeight="bold"
-            color="white"
-          >
+          <Text textAlign="left" fontWeight="bold" color="white">
             {siteTitle}
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav onScreenChange={onScreenChange} />
+            <DesktopNav />
           </Flex>
         </Flex>
         <Flex ml={{ base: -2 }} display={{ base: "flex", md: "none" }}>
@@ -67,19 +63,16 @@ const Header: React.FC<HeaderParams> = ({ siteTitle, onScreenChange }) => {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav onScreenChange={onScreenChange} />
+        <MobileNav />
       </Collapse>
     </Box>
   )
 }
 
-export interface NavParams {
-  onScreenChange: (nextScreen: number) => void
-}
-
-const DesktopNav: React.FC<NavParams> = ({ onScreenChange }) => {
+const DesktopNav: React.FC = () => {
   const linkColor = useColorModeValue("white", "white")
   const popoverContentBgColor = useColorModeValue("white", "gray.800")
+  const { setCurrentScreen } = React.useContext(NavigationContext)
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -93,7 +86,7 @@ const DesktopNav: React.FC<NavParams> = ({ onScreenChange }) => {
                 fontWeight={500}
                 color={linkColor}
                 onClick={() => {
-                  onScreenChange(pageIndex)
+                  setCurrentScreen(pageIndex)
                 }}
               >
                 {navItem.label}
@@ -149,7 +142,9 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   )
 }
 
-const MobileNav: React.FC<NavParams> = ({ onScreenChange }) => {
+const MobileNav: React.FC = () => {
+  const { setCurrentScreen } = React.useContext(NavigationContext)
+
   return (
     <Stack bgColor="#2eca7f" p={4} display={{ md: "none" }}>
       {NAV_ITEMS.map((navItem, navIndex) => (
@@ -157,7 +152,7 @@ const MobileNav: React.FC<NavParams> = ({ onScreenChange }) => {
           key={navItem.label}
           {...navItem}
           onClick={() => {
-            onScreenChange(navIndex)
+            setCurrentScreen(navIndex)
           }}
         />
       ))}

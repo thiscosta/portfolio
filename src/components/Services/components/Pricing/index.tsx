@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 
 import {
   Box,
@@ -13,6 +13,7 @@ import {
   Button,
 } from "@chakra-ui/react"
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa"
+import { NavigationContext } from "../../../../contexts/NavigationContexts"
 
 function PriceWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -30,6 +31,7 @@ function PriceWrapper({ children }: { children: React.ReactNode }) {
 }
 
 const Pricing: React.FC = () => {
+  const { setCurrentScreen } = useContext(NavigationContext)
   return (
     <Box py={12}>
       <SimpleGrid
@@ -180,6 +182,9 @@ const Pricing: React.FC = () => {
         fontWeight="bold"
         _hover={{
           bgColor: "#2eca7f",
+        }}
+        onClick={() => {
+          setCurrentScreen(4)
         }}
       >
         Entrar em contato

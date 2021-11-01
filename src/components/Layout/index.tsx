@@ -6,14 +6,13 @@ import { Box } from "@chakra-ui/layout"
 import Footer from "../Footer"
 
 export interface LayoutParams {
-  onScreenChange: (nextScreen: number) => void
   children: React.ReactNode
 }
 
-const Layout: React.FC<LayoutParams> = ({ children, onScreenChange }) => {
+const Layout: React.FC<LayoutParams> = ({ children }) => {
   return (
     <>
-      <Header onScreenChange={onScreenChange} siteTitle={`Thiago Costa`} />
+      <Header siteTitle={`Thiago Costa`} />
       <div className="header-content">
         <Box pb="50">
           <main>{children}</main>
