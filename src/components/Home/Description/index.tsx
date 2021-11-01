@@ -15,20 +15,22 @@ const Description: React.FC = () => {
         templateRows="repeat(1, 1fr)"
         templateColumns={{
           sm: "repeat(1, 1fr)",
-          lg: "repeat(2, 1fr)"
+          lg: "repeat(2, 1fr)",
         }}
         mb="-40px"
       >
-
-        <Box
-          colSpan={1}
-          display="flex"
-          flexDirection="column"
-        >
+        <Box colSpan={1} display="flex" flexDirection="column">
           <Text fontSize="2xl" fontWeight="semibold">
             Sobre mim
           </Text>
-          <Text mt="13px" fontSize="small" fontWeight="normal">
+          <Text
+            mt="13px"
+            fontSize={{
+              sm: "small",
+              md: "medium",
+            }}
+            fontWeight="normal"
+          >
             Meu nome é Thiago Costa, sou desenvolvedor de software desde 2018 e
             tenho experiência com diversas tecnologias. Atualmente trabalhando
             no Luizalabs como desenvolvedor Fullstack
@@ -37,7 +39,10 @@ const Description: React.FC = () => {
             color="white"
             bgColor="#2eca7f"
             mt="20px"
-            fontSize="small"
+            fontSize={{
+              sm: "small",
+              md: "medium",
+            }}
             fontWeight="bold"
             _hover={{
               bgColor: "#2eca7f",
