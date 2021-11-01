@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/button"
 import { Box, Grid, GridItem, Text } from "@chakra-ui/layout"
 import React from "react"
 import HomeInfo from "./components/HomeInfo"
+import resumePdf from "../../../files/CV.pdf"
 
 const Description: React.FC = () => {
   return (
@@ -23,7 +24,9 @@ const Description: React.FC = () => {
             Sobre mim
           </Text>
           <Text mt="13px" fontSize="small" fontWeight="normal">
-            Meu nome é Thiago Costa, sou desenvolvedor de software desde 2018 e tenho experiência com diversas tecnologias. Atualmente trabalhando no Luizalabs como desenvolvedor Fullstack
+            Meu nome é Thiago Costa, sou desenvolvedor de software desde 2018 e
+            tenho experiência com diversas tecnologias. Atualmente trabalhando
+            no Luizalabs como desenvolvedor Fullstack
           </Text>
           <Button
             color="white"
@@ -35,7 +38,7 @@ const Description: React.FC = () => {
               bgColor: "#2eca7f",
             }}
           >
-            Baixar currículo
+            <a href={resumePdf}>Baixar currículo</a>
           </Button>
         </GridItem>
         <GridItem

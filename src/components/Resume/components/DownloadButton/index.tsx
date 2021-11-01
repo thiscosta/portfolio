@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "@chakra-ui/button"
 import { GridItem } from "@chakra-ui/layout"
+import resumePdf from "../../../../files/CV.pdf"
 
 const DownloadButton: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const DownloadButton: React.FC = () => {
           bgColor: "#2eca7f",
         }}
       >
-        Baixar currículo
+        <a href={resumePdf}>Baixar currículo</a>{" "}
       </Button>
     </GridItem>
   )
