@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/image"
-import { Box, Text } from "@chakra-ui/layout"
+import { Box, GridItem, Text } from "@chakra-ui/layout"
 import React from "react"
 
 export interface ServiceCardParams {

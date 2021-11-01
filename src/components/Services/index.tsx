@@ -1,7 +1,8 @@
 import React from "react"
-import { Box, Grid, Text, VStack } from "@chakra-ui/layout"
+import { Box, Grid, SimpleGrid, Text, VStack } from "@chakra-ui/layout"
 import ServiceCard from "./components/ServiceCard"
 import Pricing from "./components/Pricing"
+import { Image } from "@chakra-ui/image"
 
 const Services: React.FC = () => {
   return (
@@ -42,17 +43,15 @@ const Services: React.FC = () => {
         <Text fontWeight="bold" fontSize="2xl">
           Meus serviços
         </Text>
-        <Grid
+        <SimpleGrid
           mt="20"
-          templateColumns={{
-            sm: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-            lg: "repeat(4, 1fr)",
+          columns={{
+            base: 1,
+            md: 2,
+            lg: 3,
+            xl: 4,
           }}
           gap={8}
-          display="flex"
-          alignItems="flex-start"
-          justifyContent="center"
         >
           <ServiceCard
             title="Sites"
@@ -74,7 +73,7 @@ const Services: React.FC = () => {
             description="Bots, manutenção de software e demais soluções customizadas"
             image="https://lmpixels.com/demo/procard/images/service/web_design_icon.png"
           />
-        </Grid>
+        </SimpleGrid>
         <Text fontWeight="bold" fontSize="2xl" mt={20}>
           Preços
         </Text>

@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/button"
-import { Box, Grid, GridItem, Text } from "@chakra-ui/layout"
+import { Box, Grid, GridItem, Text, SimpleGrid } from "@chakra-ui/layout"
 import React from "react"
 import HomeInfo from "./components/HomeInfo"
 import resumePdf from "../../../files/CV.pdf"
@@ -8,15 +8,20 @@ const Description: React.FC = () => {
   return (
     <Box borderBottomRadius="xl" bgColor="white" p="10%">
       <Grid
+        py={10}
         rounded="xl"
         bgPosition="center"
         bgRepeat="no-repeat"
         templateRows="repeat(1, 1fr)"
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{
+          sm: "repeat(1, 1fr)",
+          lg: "repeat(2, 1fr)"
+        }}
         mb="-40px"
       >
-        <GridItem
-          colSpan={{ sm: 2, lg: 1 }}
+
+        <Box
+          colSpan={1}
           display="flex"
           flexDirection="column"
         >
@@ -40,10 +45,10 @@ const Description: React.FC = () => {
           >
             <a href={resumePdf}>Baixar currículo</a>
           </Button>
-        </GridItem>
-        <GridItem
-          mt={{ sm: "30px", lg: "0px" }}
-          colSpan={{ sm: 2, lg: 1 }}
+        </Box>
+        <Box
+          mt={{ base: 10, lg: 0 }}
+          colSpan={1}
           display="flex"
           flexDirection="column"
         >
@@ -52,7 +57,7 @@ const Description: React.FC = () => {
           <HomeInfo title="E-mail" value="thiscosta@live.com" color="#2eca7f" />
           <HomeInfo title="Celular" value="(19) 98979-8197" />
           <HomeInfo title="Freelance" value="Disponível" />
-        </GridItem>
+        </Box>
       </Grid>
     </Box>
   )

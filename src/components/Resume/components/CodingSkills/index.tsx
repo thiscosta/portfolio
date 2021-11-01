@@ -6,7 +6,10 @@ import Skill from "./components/Skill"
 
 const CodingSkills: React.FC = () => {
   return (
-    <GridItem colSpan={2}>
+    <GridItem colSpan={{
+      base: 2,
+      lg: 4
+    }}>
       <Text fontSize="xl" fontWeight="bold">
         Habilidades
       </Text>

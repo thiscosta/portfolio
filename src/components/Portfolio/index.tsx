@@ -5,8 +5,11 @@ import Sites from "./Sites"
 import Apps from "./Apps"
 import Systems from "./Systems"
 import Customs from "./Customs"
+import { useBreakpointValue } from "@chakra-ui/media-query"
 
 const Portfolio: React.FC = () => {
+  const tabFontSize = useBreakpointValue({ base: "xs", lg: "normal" })
+
   return (
     <VStack
       spacing={0}
@@ -44,13 +47,33 @@ const Portfolio: React.FC = () => {
       >
         <Tabs isFitted variant="enclosed">
           <TabList>
-            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>Sites</Tab>
-            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>Aplicativos</Tab>
-            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>
-              Sistemas web
+            <Tab
+              fontSize={tabFontSize}
+              fontWeight="semibold"
+              _selected={{ color: "white", bg: "#2eca7f" }}
+            >
+              Sites
             </Tab>
-            <Tab _selected={{ color: "white", bg: "#2eca7f" }}>
-              Soluções customizadas
+            <Tab
+              fontSize={tabFontSize}
+              fontWeight="semibold"
+              _selected={{ color: "white", bg: "#2eca7f" }}
+            >
+              Aplicativos
+            </Tab>
+            <Tab
+              fontSize={tabFontSize}
+              fontWeight="semibold"
+              _selected={{ color: "white", bg: "#2eca7f" }}
+            >
+              Sistemas
+            </Tab>
+            <Tab
+              fontSize={tabFontSize}
+              fontWeight="semibold"
+              _selected={{ color: "white", bg: "#2eca7f" }}
+            >
+              Outros
             </Tab>
           </TabList>
           <TabPanels>

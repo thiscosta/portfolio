@@ -5,7 +5,14 @@ import resumePdf from "../../../../files/CV.pdf"
 
 const DownloadButton: React.FC = () => {
   return (
-    <GridItem colSpan={2} textAlign="center" mt={10}>
+    <GridItem
+      colSpan={{
+        base: 2,
+        lg: 4,
+      }}
+      textAlign="center"
+      mt={10}
+    >
       <Button
         w="100%"
         p="2%"

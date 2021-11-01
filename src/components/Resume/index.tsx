@@ -41,7 +41,14 @@ const Resume: React.FC = () => {
         px="5%"
         py="3%"
       >
-        <Grid templateColumns="repeat(2, 1fr)" gap={8}>
+        <Grid
+          templateRows="repeat(1, 1fr)"
+          templateColumns={{
+            sm: "repeat(2, 1fr)",
+            lg: "repeat(4, 1fr)",
+          }}
+          gap={8}
+        >
           <Education />
           <Experience />
           <CodingSkills />

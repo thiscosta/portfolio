@@ -10,7 +10,7 @@ export interface HistoricalDataParams {
 
 const HistoricalData: React.FC<HistoricalDataParams> = ({ title, cards }) => {
   return (
-    <GridItem colSpan={{ sm: 2, lg: 1 }}>
+    <GridItem colSpan={2}>
       <Text fontWeight="bold" fontSize="xl">
         {title}
       </Text>
