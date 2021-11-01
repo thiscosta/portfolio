@@ -1,23 +1,25 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import HeaderContent from "../components/Header/HeaderContent"
-import Specialities from "../components/Specialities"
-import Portfolio from "../components/Portfolio"
-import WorkWithMe from "../components/WorkWithMe"
-import Testimonials from "../components/Testimonials"
 import Home from "../components/Home"
+import Resume from "../components/Resume"
+import Portfolio from "../components/Portfolio"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <Home />
-    {/* <HeaderContent />
-    <Specialities />
-    <Portfolio />
-    <WorkWithMe />
-    <Testimonials /> */}
-  </Layout>
-)
+const IndexPage = () => {
+  const [currentScreen, setCurrentScreen] = React.useState<number>(0)
+
+  const onScreenChange = (nextScreen: number) => {
+    setCurrentScreen(nextScreen)
+  }
+
+  return (
+    <Layout onScreenChange={onScreenChange}>
+      <Seo title="Home" />
+      {currentScreen === 0 && <Home />}
+      {currentScreen === 1 && <Resume />}
+      {currentScreen === 3 && <Portfolio />}
+    </Layout>
+  )
+}
 
 export default IndexPage

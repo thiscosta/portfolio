@@ -24,28 +24,33 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-const Header = ({ siteTitle }) => {
+export interface HeaderParams {
+  siteTitle: string;
+  onScreenChange: (nextScreen: number) => void;
+}
+
+const Header: React.FC<HeaderParams> = ({ siteTitle, onScreenChange }) => {
 
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box style={{ position: 'relative', zIndex: 2 }}>
+    <Box style={{ position: 'relative', zIndex: 2 }} mb="30px">
       <Flex
-        bg="blue"
+        bg="#2eca7f"
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         align={'center'}>
-        <Flex flex={{ base: 1 }} justify={{ sm: 'left', md: 'center' }}>
+        <Flex flex={{ base: 1 }} justify={{ sm: 'left', md: 'space-between' }}>
           <Text
             textAlign={useBreakpointValue({ base: 'left', md: 'left' })}
             fontFamily={'heading'}
             color="white">
-            Logo
+            {siteTitle}
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
+            <DesktopNav onScreenChange={onScreenChange} />
           </Flex>
         </Flex>
         <Flex
@@ -63,34 +68,34 @@ const Header = ({ siteTitle }) => {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav onScreenChange={onScreenChange} />
       </Collapse>
     </Box>
   )
 
 }
 
-const DesktopNav = () => {
+export interface NavParams {
+  onScreenChange: (nextScreen: number) => void;
+}
+
+const DesktopNav: React.FC<NavParams> = ({ onScreenChange }) => {
   const linkColor = useColorModeValue('white', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem, pageIndex) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
                 p={2}
-                href={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  backgroundImage: 'linear-gradient(40deg, #FF2768 0%, #DC143C 100%);',
-                  borderRadius: '0 0 10px 10px'
-                }}>
+                onClick={() => { onScreenChange(pageIndex) }}
+                >
                 {navItem.label}
               </Link>
             </PopoverTrigger>
@@ -149,20 +154,26 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav: React.FC<NavParams> = ({ onScreenChange }) => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bgColor="#2eca7f"
       p={4}
       display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+      {NAV_ITEMS.map((navItem, navIndex) => (
+        <MobileNavItem key={navItem.label} {...navItem} onClick={() =>  {
+          onScreenChange(navIndex)
+        }} />
       ))}
     </Stack>
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
+export interface MobileNavParams extends NavItem {
+  onClick: () => void;
+}
+
+const MobileNavItem: React.FC<MobileNavParams> = ({ label, children, onClick } ) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -170,15 +181,15 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       <Flex
         py={2}
         as={Link}
-        href={href ?? '#'}
         justify={'space-between'}
         align={'center'}
         _hover={{
           textDecoration: 'none',
         }}>
         <Text
+          onClick={onClick}
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          color="white">
           {label}
         </Text>
         {children && (
@@ -224,15 +235,22 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Sobre',
   },
   {
+    label: 'Currículo',
+  },
+  {
+    label: 'Serviços',
+  },
+  {
     label: 'Portfolio',
   },
   {
+    label: 'Blog',
+  },
+  {
     label: 'Avaliações',
-    href: '#',
   },
   {
     label: 'Contato',
-    href: '#',
   },
 ];
 
