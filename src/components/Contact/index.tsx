@@ -8,7 +8,6 @@ import {
   MdCheck,
   MdOutlineEmail,
   MdOutlineTextFields,
-  MdOutlinePhone,
   MdOutlineMessage,
 } from "react-icons/md"
 import { FormControl, FormLabel } from "@chakra-ui/form-control"
@@ -17,6 +16,24 @@ import { Textarea } from "@chakra-ui/textarea"
 import { Button } from "@chakra-ui/button"
 
 const Contact: React.FC = () => {
+  const [name, setName] = React.useState<string>("")
+  const [email, setEmail] = React.useState<string>("")
+  const [message, setMessage] = React.useState<string>("")
+
+  const handleNameChange = event => setName(event.target.value)
+  const handleEmailChange = event => setEmail(event.target.value)
+  const handleMessageChange = event => setMessage(event.target.value)
+
+  const handleSubmit = () => {
+    const textMessage = `
+      Olá, meu nome é ${name} e meu e-mail é ${email}. ${message}
+    `
+    window.open(
+      `https://api.whatsapp.com/send/?phone=5519989798197&text=${textMessage}`,
+      "_blank"
+    )
+  }
+
   return (
     <VStack
       spacing={0}
@@ -79,7 +96,12 @@ const Contact: React.FC = () => {
                       pointerEvents="none"
                       children={<MdOutlineTextFields color="#2eca7f" />}
                     />
-                    <Input type="text" size="md" placeholder="Nome" />
+                    <Input
+                      type="text"
+                      size="md"
+                      placeholder="Nome"
+                      onChange={handleNameChange}
+                    />
                   </InputGroup>
                 </FormControl>
                 <FormControl id="email">
@@ -89,17 +111,12 @@ const Contact: React.FC = () => {
                       pointerEvents="none"
                       children={<MdOutlineEmail color="#2eca7f" />}
                     />
-                    <Input type="text" size="md" placeholder="E-mail" />
-                  </InputGroup>
-                </FormControl>
-                <FormControl id="phone">
-                  <FormLabel>Telefone</FormLabel>
-                  <InputGroup borderColor="#E0E1E7">
-                    <InputLeftElement
-                      pointerEvents="none"
-                      children={<MdOutlinePhone color="#2eca7f" />}
+                    <Input
+                      type="text"
+                      size="md"
+                      placeholder="E-mail"
+                      onChange={handleEmailChange}
                     />
-                    <Input type="text" size="md" placeholder="Telefone" />
                   </InputGroup>
                 </FormControl>
                 <FormControl id="message">
@@ -116,6 +133,7 @@ const Contact: React.FC = () => {
                         borderRadius: "gray.300",
                       }}
                       placeholder="Escreva sua mensagem"
+                      onChange={handleMessageChange}
                     />
                   </InputGroup>
                 </FormControl>
@@ -131,6 +149,7 @@ const Contact: React.FC = () => {
                     _hover={{
                       bgColor: "#2eca7f",
                     }}
+                    onClick={handleSubmit}
                   >
                     Entrar em contato
                   </Button>
