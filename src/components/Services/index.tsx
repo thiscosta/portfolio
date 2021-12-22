@@ -51,27 +51,28 @@ const Services: React.FC = () => {
             lg: 3,
             xl: 4,
           }}
+          alignItems={"flex-start"}
           gap={8}
         >
           <ServiceCard
             title="Sites"
             description="Desenvolvimento de sites pessoais, portfólios e sites empresariais"
-            image="https://lmpixels.com/demo/procard/images/service/web_design_icon.png"
+            image="https://icon-library.com/images/features-icon-png/features-icon-png-21.jpg"
           />
           <ServiceCard
             title="Aplicativos"
             description="Desenvolvimento de aplicativos Android, com publicação na Play Store incluída"
-            image="https://lmpixels.com/demo/procard/images/service/web_design_icon.png"
+            image="https://cdn-icons-png.flaticon.com/512/190/190507.png"
           />
           <ServiceCard
             title="Sistemas web"
             description="Desenvolvimento de sistemas web customizados para empresas, startups e etc."
-            image="https://lmpixels.com/demo/procard/images/service/web_design_icon.png"
+            image="https://www.sollutecsistemas.com.br/img/sistemas-web.png"
           />
           <ServiceCard
             title="Soluções"
             description="Bots, manutenção de software e demais soluções customizadas"
-            image="https://lmpixels.com/demo/procard/images/service/web_design_icon.png"
+            image="https://www.mgpconsultoria.com.br/wp-content/uploads/2018/05/BPM-E-ESOCIAL-ELEMENTOS-E-ATRIBUTOS-DOS-PROCESSOS-5.png"
           />
         </SimpleGrid>
         <Text fontWeight="bold" fontSize="2xl" mt={20}>

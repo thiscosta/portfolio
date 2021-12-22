@@ -22,8 +22,8 @@ const ServiceCard: React.FC<ServiceCardParams> = ({
     >
       <Image
         borderRadius="full"
-        objectFit="cover"
-        boxSize="150px"
+        width="150px"
+        height="150px"
         src={image}
       />
       <Text fontWeight="bold" textAlign="center" fontSize="lg">

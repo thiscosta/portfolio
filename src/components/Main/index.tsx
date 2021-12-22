@@ -32,12 +32,12 @@ const IndexPage = () => {
       )}
       {currentScreen === 3 && (
         <SlideFade delay={0.3} reverse in={currentScreen === 3}>
-          <Portfolio />
+          <Contact />
         </SlideFade>
       )}
       {currentScreen === 4 && (
         <ScaleFade delay={0.15} initialScale={0.8} in={currentScreen === 4}>
-          <Contact />
+          <Portfolio />
         </ScaleFade>
       )}
     </Layout>
