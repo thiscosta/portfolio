@@ -57,7 +57,7 @@ const Description: React.FC = () => {
           display="flex"
           flexDirection="column"
         >
-          <HomeInfo title="Idade" value="21" />
+          {/* <HomeInfo title="Idade" value="21" /> */}
           <HomeInfo title="Cidade" value="Hortolândia/SP" />
           <HomeInfo title="E-mail" value="thiscosta@live.com" color="brand.100" />
           <HomeInfo title="Celular" value="(19) 98979-8197" />
