@@ -27,7 +27,7 @@ const Cards: React.FC<CardsParams> = ({
     <Box
       my="4"
       bg={useColorModeValue("white", "gray.900")}
-      borderLeftColor="#2eca7f"
+      borderLeftColor="brand.100"
       rounded="lg"
       borderWidth={1}
       p={5}
@@ -36,10 +36,10 @@ const Cards: React.FC<CardsParams> = ({
         {title}
       </Heading>
       <Box display="flex" flexDirection="row" mb={4}>
-        <Text fontSize="xs" color="#2eca7f" mr="1.5">
+        <Text fontSize="xs" color="brand.100" mr="1.5">
           {date}
         </Text>
-        <Text fontSize="xs" color="#2eca7f" mr="1.5">
+        <Text fontSize="xs" color="brand.100" mr="1.5">
           |
         </Text>
         <Text fontSize="xs" color={"gray.500"}>
@@ -62,7 +62,7 @@ const Cards: React.FC<CardsParams> = ({
           {tags.map(tag => (
             <Box>
               <Badge
-                bgColor="#2eca7f"
+                bgColor="brand.100"
                 color="white"
                 fontWeight={"600"}
               >

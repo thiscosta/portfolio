@@ -9,7 +9,7 @@ export interface ContactItemParams {
 const ContactItem: React.FC<ContactItemParams> = ({ title, icon }) => {
   return (
     <Box display="flex" flexDir="row" alignItems="center" mt="5">
-      <Icon as={icon} w={5} h={5} color="#2eca7f" mr="8" />
+      <Icon as={icon} w={5} h={5} color="brand.100" mr="8" />
       <Text fontWeight="bold" fontSize="sm">
         {title}
       </Text>

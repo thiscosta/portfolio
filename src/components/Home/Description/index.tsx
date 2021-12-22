@@ -37,7 +37,7 @@ const Description: React.FC = () => {
           </Text>
           <Button
             color="white"
-            bgColor="#2eca7f"
+            bgColor="brand.100"
             mt="20px"
             fontSize={{
               sm: "small",
@@ -45,7 +45,7 @@ const Description: React.FC = () => {
             }}
             fontWeight="bold"
             _hover={{
-              bgColor: "#2eca7f",
+              bgColor: "brand.100",
             }}
           >
             <a href={resumePdf}>Baixar currículo</a>
@@ -59,7 +59,7 @@ const Description: React.FC = () => {
         >
           <HomeInfo title="Idade" value="21" />
           <HomeInfo title="Cidade" value="Hortolândia/SP" />
-          <HomeInfo title="E-mail" value="thiscosta@live.com" color="#2eca7f" />
+          <HomeInfo title="E-mail" value="thiscosta@live.com" color="brand.100" />
           <HomeInfo title="Celular" value="(19) 98979-8197" />
           <HomeInfo title="Freelance" value="Disponível" />
         </Box>

@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
     >
       <Box
         roundedTop="lg"
-        bgColor="#2eca7f"
+        bgColor="brand.100"
         bgImage="url('images/banner-bg.png')"
         bgPosition="center"
         bgRepeat="no-repeat"
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                   <InputGroup borderColor="#E0E1E7">
                     <InputLeftElement
                       pointerEvents="none"
-                      children={<MdOutlineTextFields color="#2eca7f" />}
+                      children={<MdOutlineTextFields color="brand.100" />}
                     />
                     <Input
                       type="text"
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
                   <InputGroup borderColor="#E0E1E7">
                     <InputLeftElement
                       pointerEvents="none"
-                      children={<MdOutlineEmail color="#2eca7f" />}
+                      children={<MdOutlineEmail color="brand.100" />}
                     />
                     <Input
                       type="text"
@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
                   <InputGroup borderColor="#E0E1E7">
                     <InputLeftElement
                       pointerEvents="none"
-                      children={<MdOutlineMessage color="#2eca7f" />}
+                      children={<MdOutlineMessage color="brand.100" />}
                     />
                     <Textarea
                       pl="10"
@@ -142,12 +142,12 @@ const Contact: React.FC = () => {
                     w="100%"
                     p="2%"
                     color="white"
-                    bgColor="#2eca7f"
+                    bgColor="brand.100"
                     mt="20px"
                     fontSize="md"
                     fontWeight="bold"
                     _hover={{
-                      bgColor: "#2eca7f",
+                      bgColor: "brand.100",
                     }}
                     onClick={handleSubmit}
                   >

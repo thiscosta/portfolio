@@ -15,7 +15,7 @@ const Resume: React.FC = () => {
     >
       <Box
         roundedTop="lg"
-        bgColor="#2eca7f"
+        bgColor="brand.100"
         bgImage="url('images/banner-bg.png')"
         bgPosition="center"
         bgRepeat="no-repeat"

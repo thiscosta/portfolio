@@ -35,7 +35,7 @@ const Header: React.FC<HeaderParams> = ({ siteTitle }) => {
   return (
     <Box style={{ position: "relative", zIndex: 2 }} mb="30px">
       <Flex
-        bg="#2eca7f"
+        bg="brand.100"
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -146,7 +146,7 @@ const MobileNav: React.FC = () => {
   const { setCurrentScreen } = React.useContext(NavigationContext)
 
   return (
-    <Stack bgColor="#2eca7f" p={4} display={{ md: "none" }}>
+    <Stack bgColor="brand.100" p={4} display={{ md: "none" }}>
       {NAV_ITEMS.map((navItem, navIndex) => (
         <MobileNavItem
           key={navItem.label}

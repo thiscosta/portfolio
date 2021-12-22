@@ -19,7 +19,7 @@ const Portfolio: React.FC = () => {
     >
       <Box
         roundedTop="lg"
-        bgColor="#2eca7f"
+        bgColor="brand.100"
         bgImage="url('images/banner-bg.png')"
         bgPosition="center"
         bgRepeat="no-repeat"
@@ -50,28 +50,28 @@ const Portfolio: React.FC = () => {
             <Tab
               fontSize={tabFontSize}
               fontWeight="semibold"
-              _selected={{ color: "white", bg: "#2eca7f" }}
+              _selected={{ color: "white", bg: "brand.100" }}
             >
               Sites
             </Tab>
             <Tab
               fontSize={tabFontSize}
               fontWeight="semibold"
-              _selected={{ color: "white", bg: "#2eca7f" }}
+              _selected={{ color: "white", bg: "brand.100" }}
             >
               Aplicativos
             </Tab>
             <Tab
               fontSize={tabFontSize}
               fontWeight="semibold"
-              _selected={{ color: "white", bg: "#2eca7f" }}
+              _selected={{ color: "white", bg: "brand.100" }}
             >
               Sistemas
             </Tab>
             <Tab
               fontSize={tabFontSize}
               fontWeight="semibold"
-              _selected={{ color: "white", bg: "#2eca7f" }}
+              _selected={{ color: "white", bg: "brand.100" }}
             >
               Outros
             </Tab>

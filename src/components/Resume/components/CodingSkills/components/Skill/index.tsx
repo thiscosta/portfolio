@@ -11,7 +11,7 @@ const Skill: React.FC<SkillParams> = ({ title, value }) => {
   return (
     <Box mt={4}>
       <Text>{title}</Text>
-      <Progress hasStripe colorScheme="green" size="sm" value={value} />
+      <Progress hasStripe colorScheme="blue" size="sm" value={value} />
     </Box>
   )
 }

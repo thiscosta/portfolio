@@ -14,7 +14,7 @@ const Title: React.FC = () => {
   return (
     <Grid
       rounded="xl"
-      bgColor="#2eca7f"
+      bgColor="brand.100"
       bgImage="url('images/banner-bg.png')"
       bgPosition="center"
       bgRepeat="no-repeat"

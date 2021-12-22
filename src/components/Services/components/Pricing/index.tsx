@@ -66,11 +66,11 @@ const Pricing: React.FC = () => {
           >
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaCheckCircle} color="brand.100" />
                 portfolios, sites institucionais e/ou pessoais
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaCheckCircle} color="brand.100" />
                 consultoria de hospedagem grátis
               </ListItem>
               <ListItem>
@@ -106,23 +106,23 @@ const Pricing: React.FC = () => {
             >
               <List spacing={3} textAlign="start" px={12}>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaCheckCircle} color="brand.100" />
                   desenvolvimento sob medida
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaCheckCircle} color="brand.100" />
                   seguro e performático
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaCheckCircle} color="brand.100" />
                   design próprio ou do cliente
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaCheckCircle} color="brand.100" />
                   desenvolvimento de protótipos
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaCheckCircle} color="brand.100" />
                   publicação na Play Store
                 </ListItem>
               </List>
@@ -153,19 +153,19 @@ const Pricing: React.FC = () => {
           >
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaCheckCircle} color="brand.100" />
                 frontend + backend
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaCheckCircle} color="brand.100" />
                 desenvolvimento de protótipos
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaCheckCircle} color="brand.100" />
                 facil manutenção e evolução do produto
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaCheckCircle} color="brand.100" />
                 consultoria de hospedagem grátis
               </ListItem>
             </List>
@@ -176,12 +176,12 @@ const Pricing: React.FC = () => {
         w="100%"
         p="2%"
         color="white"
-        bgColor="#2eca7f"
+        bgColor="brand.100"
         mt="20px"
         fontSize="md"
         fontWeight="bold"
         _hover={{
-          bgColor: "#2eca7f",
+          bgColor: "brand.100",
         }}
         onClick={() => {
           setCurrentScreen(4)

@@ -17,12 +17,12 @@ const DownloadButton: React.FC = () => {
         w="100%"
         p="2%"
         color="white"
-        bgColor="#2eca7f"
+        bgColor="brand.100"
         mt="20px"
         fontSize="md"
         fontWeight="bold"
         _hover={{
-          bgColor: "#2eca7f",
+          bgColor: "brand.100",
         }}
       >
         <a href={resumePdf}>Baixar currículo</a>{" "}
