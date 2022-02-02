@@ -33,7 +33,7 @@ const Description: React.FC = () => {
           >
             Meu nome é Thiago Costa, sou desenvolvedor de software desde 2018 e
             tenho experiência com diversas tecnologias. Atualmente trabalhando
-            no Luizalabs como desenvolvedor Fullstack
+            na Fullstack Labs como desenvolvedor Fullstack
           </Text>
           <Button
             color="white"
@@ -47,8 +47,11 @@ const Description: React.FC = () => {
             _hover={{
               bgColor: "brand.100",
             }}
+            onClick={() => {
+              window.open(resumePdf)
+            }}
           >
-            <a href={resumePdf}>Baixar currículo</a>
+            Baixar currículo
           </Button>
         </Box>
         <Box
