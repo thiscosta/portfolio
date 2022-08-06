@@ -9,8 +9,40 @@ const Experience: React.FC = () => {
         {
           title: "Desenvolvedor Full Stack",
           content:
+            "Desenvolvimento full stack na criação de uma plataforma de low code, para a conversão de arquivos de design do figma para código react utilizando a biblioteca de componentes MUI. Arquitetura do sistema, gerenciamento das atividades para o time e gerenciamento do ambiente cloud",
+          date: "13/06/2022 - Atual",
+          description: "Quest.ai",
+          tags: [
+            "NodeJS",
+            "React",
+            "Cloud (AWS/GCP)",
+            "MySQL",
+            "Git",
+            "Figma",
+          ],
+        },
+        {
+          title: "Desenvolvedor Full Stack",
+          content:
+            "Desenvolvimento full stack, atuando na criação de uma plataforma de leitura de audiobooks. Arquitetura do sistema, manutenção de microsserviços e gerenciamento dos deploys e do cluster kubernetes. ",
+          date: "17/01/2022 - 10/06/2022",
+          description: "Fullstack Labs",
+          tags: [
+            "NodeJS",
+            "React",
+            "Cloud (AWS/GCP)",
+            "MySQL",
+            "GraphQL",
+            "Git",
+            "Testes automatizados",
+            "Playwright"
+          ],
+        },
+        {
+          title: "Desenvolvedor Full Stack",
+          content:
             "Desenvolvimento full stack, design e arquitetura de soluções em ambiente cloud, gerenciamento de cluster kubernetes, monitoramento de aplicações em ambiente produtivo utilizando ELK, Grafana e Webhooks, criação de pipelines de CI/CD e ingestões de dados para o BigQuery (GCP) para o sistema de logística do Magazine Luiza",
-          date: "19/10/2020 - Atual",
+          date: "19/10/2020 - 07/01/2022",
           description: "Luizalabs",
           tags: [
             "NodeJS",
@@ -23,7 +55,6 @@ const Experience: React.FC = () => {
             "MySQL",
             "GraphQL",
             "Git",
-            "Agile"
           ],
         },
         {
@@ -43,7 +74,6 @@ const Experience: React.FC = () => {
             "Cloud (AWS/GCP)",
             "Kubernetes",
             "Git",
-            "Agile"
           ],
         },
         {
@@ -62,7 +92,6 @@ const Experience: React.FC = () => {
             "Android",
             "Cloud (AWS/GCP)",
             "Git",
-            "Agile"
           ],
         },
       ]}
