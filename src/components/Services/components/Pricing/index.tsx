@@ -48,14 +48,8 @@ const Pricing: React.FC = () => {
               Websites
             </Text>
             <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                R$
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                50
-              </Text>
               <Text fontSize="3xl" color="gray.500">
-                /hora
+                À consultar
               </Text>
             </HStack>
           </Box>
@@ -88,15 +82,9 @@ const Pricing: React.FC = () => {
                 Aplicativos android
               </Text>
               <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  R$
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  60
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /hora
-                </Text>
+              <Text fontSize="3xl" color="gray.500">
+                À consultar
+              </Text>
               </HStack>
             </Box>
             <VStack
@@ -135,14 +123,8 @@ const Pricing: React.FC = () => {
               Sistemas web
             </Text>
             <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                65
-              </Text>
               <Text fontSize="3xl" color="gray.500">
-                /hora
+                À consultar
               </Text>
             </HStack>
           </Box>
