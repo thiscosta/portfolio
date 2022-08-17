@@ -15,6 +15,7 @@
 import { Avatar } from '@mui/material';
 import Avatar1Image from './assets/images/Avatar.png';
 import { styled } from '@mui/material/styles';
+import { Frame13Props } from './types';
 
  
 const Frame131: any = styled("div")({  
@@ -63,7 +64,7 @@ const Avatar3: any = styled(Avatar)({
   height: `40px`,  
 });
  
-function Frame13(): JSX.Element {
+function Frame13(props: Frame13Props): JSX.Element {
   return (
     <Frame131 >
        <Frame14 >
