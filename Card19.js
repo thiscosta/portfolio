@@ -178,7 +178,7 @@ const ButtonContained = styled(Button)({
   margin: `8px 0px 0px 0px`,  
 });
  
-function Card19(props) {
+function Card19() {
   return (
     <TypeQuest >
        <ImageFrame >
