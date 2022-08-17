@@ -12,9 +12,13 @@
 
 const useCard4 = () => {
   let data: any = {};
-  const getScroll = (param1:any,  param2: any): any => {};
+  const getScroll = (price: number, text: string): any => {
+    console.log(price, text);
+  };
 
-  const newFunction = (): any => {};
+  const newFunction = (): any => {
+    alert('something')
+  };
   let fns: any = {getScroll, newFunction};
   return {data, fns};
 }
