@@ -83,7 +83,8 @@ const Content: any = styled("div", {
   backgroundImage: data.bgImage,  
   height: "100vh",  
   width: data.width,  
-  overflow: fns.getScroll(),  
+  overflow: fns.getScroll(param1),  
+  cursor: `pointer`,  
 }));
   
 const Details: any = styled("div")({  
@@ -138,7 +139,7 @@ function Card4(props: Card4Props): JSX.Element {
          <Image data={data} >
          </Image>
        </ImageFrame>
-       <Content props={props} data={data} fns={fns} >
+       <Content onClick={fns.newFunction} props={props} data={data} fns={fns} >
          <Details >
            <Title >
              {`15 Summer drinks to make while hosting friends`}

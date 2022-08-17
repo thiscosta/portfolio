@@ -12,9 +12,10 @@
 
 const useCard4 = () => {
   let data: any = {};
-  const getScroll = (): any => {};
+  const getScroll = (, param1:any): any => {};
 
-  let fns: any = {getScroll};
+  const newFunction = (): any => {};
+  let fns: any = {getScroll, newFunction};
   return {data, fns};
 }
 
