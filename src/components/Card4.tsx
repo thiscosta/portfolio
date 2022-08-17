@@ -83,7 +83,7 @@ const Content: any = styled("div", {
   backgroundImage: data.bgImage,  
   height: "100vh",  
   width: data.width,  
-  overflow: fns.getScroll(param1),  
+  overflow: fns.getScroll(param1, param2),  
   cursor: `pointer`,  
 }));
   
