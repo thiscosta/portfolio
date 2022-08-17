@@ -15,6 +15,7 @@
 import SwitchDarkImage from '../assets/images/switch_dark_1.png';
 import SwitchDark1Image from '../assets/images/switch_dark.png';
 import { styled } from '@mui/material/styles';
+import { ExportSwitchProps } from './types';
 
  
 const PricingCode: any = styled("div")({  
@@ -83,7 +84,7 @@ const Right: any = styled("div")(({ theme }: any) =>({
   margin: `-2px 0px 0px 0px`,  
 }));
  
-function ExportSwitch(): JSX.Element {
+function ExportSwitch(props: ExportSwitchProps): JSX.Element {
   return (
     <PricingCode >
        <SwitchDark  src={SwitchDarkImage} alt={"switch_dark"}/>
