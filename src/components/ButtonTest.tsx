@@ -13,7 +13,7 @@
 **********************************************************************/
 
 import { Button, SvgIcon } from '@mui/material';
-import { ReactComponent as ChevronRightFilled1 } from './assets/images/ChevronRightFilled.svg';
+import { ReactComponent as ChevronRightFilled1 } from '../assets/images/ChevronRightFilled.svg';
 import { styled } from '@mui/material/styles';
 
  

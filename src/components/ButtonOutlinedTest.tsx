@@ -13,7 +13,7 @@
 **********************************************************************/
 
 import { Button, SvgIcon } from '@mui/material';
-import { ReactComponent as ArrowBackFilled1 } from './assets/images/ArrowBackFilled.svg';
+import { ReactComponent as ArrowBackFilled1 } from '../assets/images/ArrowBackFilled.svg';
 import { styled } from '@mui/material/styles';
 
  

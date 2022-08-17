@@ -12,7 +12,7 @@
 *
 **********************************************************************/
 
-import Ig21Image from './assets/images/IG2_1.png';
+import Ig21Image from '../assets/images/IG2_1.png';
 import { styled } from '@mui/material/styles';
 
  
