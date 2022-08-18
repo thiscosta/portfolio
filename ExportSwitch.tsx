@@ -12,8 +12,8 @@
 *
 **********************************************************************/
 
-import SwitchDarkImage from '../assets/images/switch_dark_1.png';
-import SwitchDark1Image from '../assets/images/switch_dark.png';
+import SwitchDarkImage from './assets/images/switch_dark_1.png';
+import SwitchDark1Image from './assets/images/switch_dark.png';
 import { styled } from '@mui/material/styles';
 import { ExportSwitchProps } from './types';
 

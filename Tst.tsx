@@ -13,7 +13,7 @@
 **********************************************************************/
 
 import { TextField, InputAdornment, SvgIcon } from '@mui/material';
-import { ReactComponent as RemoveRedEyeFilled1 } from '../assets/images/RemoveRedEyeFilled.svg';
+import { ReactComponent as RemoveRedEyeFilled1 } from './assets/images/RemoveRedEyeFilled.svg';
 import { styled } from '@mui/material/styles';
 
  

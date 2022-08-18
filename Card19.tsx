@@ -14,7 +14,7 @@
 
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ImageImage from '../assets/images/Image.png';
+import ImageImage from './assets/images/Image.png';
 
  
 const TypeQuest: any = styled("div")(({ theme }: any) =>({  
