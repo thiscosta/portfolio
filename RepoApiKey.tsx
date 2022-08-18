@@ -15,6 +15,7 @@
 import { SvgIcon, TextField, Link, Button } from '@mui/material';
 import { ReactComponent as CloseFilled1 } from './assets/images/CloseFilled.svg';
 import { styled } from '@mui/material/styles';
+import { RepoApiKeyProps } from './types';
 import useRepoApiKey from './useRepoApiKey';
  
 const RepoApiKey1: any = styled("div")(({ theme }: any) =>({  
@@ -116,7 +117,7 @@ const ButtonContained: any = styled(Button)({
   margin: `20px 0px 0px 0px`,  
 });
  
-function RepoApiKey(): JSX.Element {
+function RepoApiKey(props: RepoApiKeyProps): JSX.Element {
   const {fns} = useRepoApiKey();
   return (
     <RepoApiKey1 >
