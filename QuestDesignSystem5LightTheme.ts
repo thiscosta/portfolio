@@ -1,14 +1,23 @@
 
 import { createTheme } from "@mui/material/styles";
 
+import SvgIcon from '@mui/material/SvgIcon';
+
+import { ReactComponent as CheckCircleOutlined } from "./assets/images/CheckCircleOutlined.svg"; 
+import { ReactComponent as InfoOutlined } from "./assets/images/InfoOutlined.svg"; 
+import { ReactComponent as WarningAmberOutlined } from "./assets/images/WarningAmberOutlined.svg"; 
+import { ReactComponent as ErrorOutline } from "./assets/images/ErrorOutline.svg"; 
+import { ReactComponent as CheckBoxFilled } from "./assets/images/CheckBoxFilled.svg"; 
+import { ReactComponent as IndeterminateCheckBo } from "./assets/images/IndeterminateCheckBoxFilled.svg"; 
+import { ReactComponent as CheckBoxOutlineBlank } from "./assets/images/CheckBoxOutlineBlankOutlined.svg"; 
    
 const globalTheme: any = createTheme({
   palette: {
    "mode": "light",
    "primary": {
-     "main": "rgba(25, 118, 210, 1)",
-     "light": "rgba(66, 165, 245, 1)",
-     "dark": "rgba(21, 101, 192, 1)",
+     "main": "rgba(226, 185, 93, 1)",
+     "light": "rgba(242, 204, 119, 1)",
+     "dark": "rgba(226, 176, 63, 1)",
      "contrastText": "rgba(255, 255, 255, 1)"
    },
    "secondary": {
@@ -57,12 +66,21 @@ const globalTheme: any = createTheme({
    "Text": {
      "Primary": "rgba(0, 0, 0, 0.87)",
      "Secondary": "rgba(0, 0, 0, 0.6)",
-     "Disabled": "rgba(0, 0, 0, 0.38)"
+     "Disabled": "rgba(0, 0, 0, 0.38)",
+     "Primary Shades": {
+       "4p": "rgba(0, 0, 0, 0.04)",
+       "12p": "rgba(0, 0, 0, 0.12)",
+       "30p": "rgba(0, 0, 0, 0.3)"
+     },
+     "Secondary Shades": {
+       "4p": "rgba(0, 0, 0, 0.04)",
+       "18p": "rgba(0, 0, 0, 0.18)"
+     }
    },
    "Primary": {
-     "Main": "rgba(25, 118, 210, 1)",
-     "Dark": "rgba(21, 101, 192, 1)",
-     "Light": "rgba(66, 165, 245, 1)",
+     "Main": "rgba(226, 185, 93, 1)",
+     "Dark": "rgba(226, 176, 63, 1)",
+     "Light": "rgba(242, 204, 119, 1)",
      "Contrast": "rgba(255, 255, 255, 1)",
      "Shades": {
        "4p": "rgba(25, 118, 210, 0.04)",
@@ -86,12 +104,15 @@ const globalTheme: any = createTheme({
      }
    },
    "Action": {
+     "Active (54p)": "rgba(0, 0, 0, 0.54)",
      "Hover (4p)": "rgba(0, 0, 0, 0.04)",
      "Selected (8p)": "rgba(0, 0, 0, 0.08)",
+     "Disabled (26p)": "rgba(0, 0, 0, 0.26)",
      "Disabled Background (12p)": "rgba(0, 0, 0, 0.12)",
      "Focus (12p)": "rgba(0, 0, 0, 0.12)",
-     "Disabled (26p)": "rgba(0, 0, 0, 0.26)",
-     "Active (54p)": "rgba(0, 0, 0, 0.54)"
+     "Shades": {
+       "30p": "rgba(0, 0, 0, 0.3)"
+     }
    },
    "Error": {
      "Main": "rgba(211, 47, 47, 1)",
@@ -138,8 +159,8 @@ const globalTheme: any = createTheme({
    "Success": {
      "Main": "rgba(46, 125, 50, 1)",
      "Dark": "rgba(27, 94, 32, 1)",
-     "Light": "rgba(76, 175, 80, 1)",
      "Contrast": "rgba(255, 255, 255, 1)",
+     "Light": "rgba(76, 175, 80, 1)",
      "Shades": {
        "4p": "rgba(46, 125, 50, 0.04)",
        "12p": "rgba(46, 125, 50, 0.12)",
@@ -151,7 +172,7 @@ const globalTheme: any = createTheme({
    },
    "Background": {
      "Paper": "rgba(255, 255, 255, 1)",
-     "Default": "rgba(255, 255, 255, 1)"
+     "Default": "rgba(250, 250, 250, 1)"
    },
    "Other": {
      "Divider": "rgba(0, 0, 0, 0.12)",
@@ -160,19 +181,13 @@ const globalTheme: any = createTheme({
      "Filled Input Background": "rgba(0, 0, 0, 0.06)",
      "Standard Input Line": "rgba(0, 0, 0, 0.42)",
      "Snackbar": "rgba(50, 50, 50, 1)",
-     "Rating Active": "rgba(255, 180, 0, 1)",
-     "focus-ring-color": "rgba(0, 95, 204, 1)"
+     "Rating Active": "rgba(255, 180, 0, 1)"
    },
    "Common": {
      "Black": {
-       "4p": "rgba(0, 0, 0, 0.04)",
-       "12p": "rgba(0, 0, 0, 0.12)",
-       "30p": "rgba(0, 0, 0, 0.3)",
        "100p": "rgba(0, 0, 0, 1)"
      },
      "White": {
-       "8p": "rgba(255, 255, 255, 0.08)",
-       "12p": "rgba(255, 255, 255, 0.12)",
        "30p": "rgba(255, 255, 255, 0.3)",
        "100p": "rgba(255, 255, 255, 1)"
      }
@@ -477,7 +492,7 @@ const globalTheme: any = createTheme({
        "fontFamily": "Roboto",
        "fontWeight": 300,
        "fontSize": "60px",
-       "letterSpacing": "-0.3px",
+       "letterSpacing": "-0.3000000357627869px",
        "textDecoration": "none",
        "lineHeight": "120.00000476837158%",
        "textTransform": "none"
@@ -616,7 +631,7 @@ const globalTheme: any = createTheme({
      },
      "Button Large": {
        "fontStyle": "normal",
-       "fontFamily": "Roboto",
+       "fontFamily": "Inter",
        "fontWeight": 500,
        "fontSize": "15px",
        "letterSpacing": "0.06900000125169754px",
@@ -626,7 +641,7 @@ const globalTheme: any = createTheme({
      },
      "Button Medium": {
        "fontStyle": "normal",
-       "fontFamily": "Roboto",
+       "fontFamily": "Inter",
        "fontWeight": 500,
        "fontSize": "14px",
        "letterSpacing": "0.056000000834465026px",
@@ -636,7 +651,7 @@ const globalTheme: any = createTheme({
      },
      "Button Small": {
        "fontStyle": "normal",
-       "fontFamily": "Roboto",
+       "fontFamily": "Inter",
        "fontWeight": 500,
        "fontSize": "13px",
        "letterSpacing": "0.05980000108480454px",
@@ -840,11 +855,53 @@ const questTheme = createTheme({
     MuiAlert: {
       defaultProps: {
         iconMapping: {
+            success: <SvgIcon component={CheckCircleOutlined} />,
+            info: <SvgIcon component={InfoOutlined} />,
+            warning: <SvgIcon component={WarningAmberOutlined} />,
+            error: <SvgIcon component={ErrorOutline} />,
         },
       },
       styleOverrides: {
+        filledSuccess: {
+          backgroundColor: globalTheme.palette["Success"]["Main"], 
+          borderRadius: `4px`, 
+        },
+        filledInfo: {
+          backgroundColor: globalTheme.palette["Info"]["Main"], 
+          borderRadius: `4px`, 
+        },
+        filledWarning: {
+          backgroundColor: globalTheme.palette["Warning"]["Main"], 
+          borderRadius: `4px`, 
+        },
+        filledError: {
+          backgroundColor: globalTheme.palette["Error"]["Main"], 
+          borderRadius: `4px`, 
+        },
       }
     },
+    MuiAvatar: {
+      styleOverrides: {
+        "square": {
+        }, 
+        "rounded": {
+          borderRadius: `4px`, 
+        }, 
+        "circular": {
+        }, 
+        "colorDefault": {
+          color: globalTheme.palette["Background"]["Paper"], 
+          fontStyle: globalTheme.typography["Components"]["Avatar Initials"].fontStyle, 
+          fontFamily: globalTheme.typography["Components"]["Avatar Initials"].fontFamily, 
+          fontWeight: globalTheme.typography["Components"]["Avatar Initials"].fontWeight, 
+          fontSize: globalTheme.typography["Components"]["Avatar Initials"].fontSize, 
+          letterSpacing: globalTheme.typography["Components"]["Avatar Initials"].letterSpacing, 
+          textDecoration: globalTheme.typography["Components"]["Avatar Initials"].textDecoration, 
+          lineHeight: globalTheme.typography["Components"]["Avatar Initials"].lineHeight, 
+          textTransform: globalTheme.typography["Components"]["Avatar Initials"].textTransform, 
+        }, 
+      }
+    } ,
     MuiButton: {
       styleOverrides: {
         containedSizeSmall: {
@@ -889,11 +946,11 @@ const questTheme = createTheme({
         containedPrimary: {
           backgroundColor: globalTheme.palette["Primary"]["Main"], 
           boxShadow: globalTheme.customShadows["Elevation"]["2"].boxShadow, 
-          color: `rgba(255, 255, 255, 1)`,  
+          color: `rgba(50, 50, 50, 1)`,  
           "&:hover": {
             backgroundColor: globalTheme.palette["Primary"]["Dark"], 
             boxShadow: globalTheme.customShadows["Elevation"]["4"].boxShadow, 
-            color: `rgba(255, 255, 255, 1)`,  
+            color: `rgba(50, 50, 50, 1)`,  
           }, 
           "&:disabled": {
             backgroundColor: globalTheme.palette["Action"]["Disabled Background (12p)"], 
@@ -1010,12 +1067,14 @@ const questTheme = createTheme({
           height: `36px`, 
         }, 
         textPrimary: {
-          color: `rgba(25, 118, 210, 1)`,  
+          color: `rgba(226, 185, 93, 1)`,  
           "&:hover": {
             backgroundColor: globalTheme.palette["Primary"]["Shades"]["4p"], 
-            color: `rgba(25, 118, 210, 1)`,  
+            color: `rgba(226, 185, 93, 1)`,  
           }, 
           "&:disabled": {
+            border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
+            boxSizing: `border-box`, 
             color: `rgba(0, 0, 0, 0.26)`,  
           }, 
         }, 
@@ -1026,6 +1085,8 @@ const questTheme = createTheme({
             color: `rgba(156, 39, 176, 1)`,  
           }, 
           "&:disabled": {
+            border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
+            boxSizing: `border-box`, 
             color: `rgba(0, 0, 0, 0.26)`,  
           }, 
         }, 
@@ -1036,6 +1097,8 @@ const questTheme = createTheme({
             color: `rgba(211, 47, 47, 1)`,  
           }, 
           "&:disabled": {
+            border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
+            boxSizing: `border-box`, 
             color: `rgba(0, 0, 0, 0.26)`,  
           }, 
         }, 
@@ -1046,6 +1109,8 @@ const questTheme = createTheme({
             color: `rgba(46, 125, 50, 1)`,  
           }, 
           "&:disabled": {
+            border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
+            boxSizing: `border-box`, 
             color: `rgba(0, 0, 0, 0.26)`,  
           }, 
         }, 
@@ -1056,6 +1121,8 @@ const questTheme = createTheme({
             color: `rgba(2, 136, 209, 1)`,  
           }, 
           "&:disabled": {
+            border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
+            boxSizing: `border-box`, 
             color: `rgba(0, 0, 0, 0.26)`,  
           }, 
         }, 
@@ -1066,6 +1133,8 @@ const questTheme = createTheme({
             color: `rgba(237, 108, 2, 1)`,  
           }, 
           "&:disabled": {
+            border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
+            boxSizing: `border-box`, 
             color: `rgba(0, 0, 0, 0.26)`,  
           }, 
         }, 
@@ -1111,12 +1180,12 @@ const questTheme = createTheme({
         outlinedPrimary: {
           border: `1px solid globalTheme.customShadows["Light"]["Primary"]["Shades"]["50p"].color`, 
           boxSizing: `border-box`, 
-          color: `rgba(25, 118, 210, 1)`,  
+          color: `rgba(226, 185, 93, 1)`,  
           "&:hover": {
             backgroundColor: globalTheme.palette["Primary"]["Shades"]["4p"], 
             border: `1px solid globalTheme.customShadows["Light"]["Primary"]["Shades"]["50p"].color`, 
             boxSizing: `border-box`, 
-            color: `rgba(25, 118, 210, 1)`,  
+            color: `rgba(226, 185, 93, 1)`,  
           }, 
           "&:disabled": {
             border: `1px solid globalTheme.customShadows["Light"]["Action"]["Disabled Background (12p)"].color`, 
@@ -1208,10 +1277,15 @@ const questTheme = createTheme({
     },
     MuiCheckbox: {
       defaultProps: {
+        checkedIcon: <SvgIcon component={CheckBoxFilled} />,
+        indeterminateIcon: <SvgIcon component={IndeterminateCheckBo} />,
+        icon: <SvgIcon component={CheckBoxOutlineBlank } />,
       },
       styleOverrides: {
         root: {
           "&:hover": {
+            backgroundColor: globalTheme.palette["Primary"]["Shades"]["4p"], 
+            borderRadius: `19px`, 
           }
         }
       }
